@@ -1,522 +1,344 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=40&duration=3000&pause=1000&color=2E86AB&center=true&vCenter=true&width=600&lines=🚛+FLEET+MASTER+🚛;Advanced+Fleet+Management;iOS+Application" alt="Fleet Master" />
+<!-- Header with animated title -->
+<img width="800" height="400" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=300&section=header&text=🚛%20FLEET%20MASTER%20🚛&fontSize=50&fontColor=ffffff&animation=twinkling&fontAlignY=35&desc=Advanced%20Fleet%20Management%20for%20iOS&descAlignY=55&descSize=20"/>
 
-<svg width="100%" height="200" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+<!-- Dynamic typing effect -->
+<img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=35&duration=3000&pause=1000&color=2E86AB&center=true&vCenter=true&width=800&lines=🚀+Next-Generation+Fleet+Management;📱+Native+iOS+Application;⚡+Real-time+GPS+Tracking;🛠️+Built+with+SwiftUI" alt="Fleet Master Features" />
+
+<!-- Animated truck SVG -->
+<p align="center">
+<svg width="400" height="120" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <style>
-      .truck {
-        animation: drive 4s ease-in-out infinite;
-      }
-      .wheel {
-        animation: rotate 1s linear infinite;
-        transform-origin: center;
-      }
-      .road {
-        stroke-dasharray: 20 10;
-        animation: roadMove 2s linear infinite;
-      }
-      .cloud {
-        animation: float 6s ease-in-out infinite;
-      }
-      .title-text {
-        font-family: 'Arial', sans-serif;
-        font-weight: bold;
-        animation: glow 2s ease-in-out infinite alternate;
-      }
+      .truck-body { animation: bounce 2s ease-in-out infinite; }
+      .wheel { animation: spin 1s linear infinite; transform-origin: center; }
+      .smoke { animation: smoke-rise 3s ease-out infinite; }
+      .road-line { animation: road-move 1.5s linear infinite; }
       
-      @keyframes drive {
-        0%, 100% { transform: translateX(0px) translateY(0px); }
-        25% { transform: translateX(100px) translateY(-2px); }
-        50% { transform: translateX(200px) translateY(0px); }
-        75% { transform: translateX(300px) translateY(-2px); }
+      @keyframes bounce {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-3px); }
       }
-      
-      @keyframes rotate {
+      @keyframes spin {
         from { transform: rotate(0deg); }
         to { transform: rotate(360deg); }
       }
-      
-      @keyframes roadMove {
+      @keyframes smoke-rise {
+        0% { opacity: 0.8; transform: translateY(0px) scale(1); }
+        100% { opacity: 0; transform: translateY(-20px) scale(1.5); }
+      }
+      @keyframes road-move {
         from { stroke-dashoffset: 0; }
-        to { stroke-dashoffset: 30; }
-      }
-      
-      @keyframes float {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-10px); }
-      }
-      
-      @keyframes glow {
-        from { fill: #2E86AB; }
-        to { fill: #A23B72; }
+        to { stroke-dashoffset: 20; }
       }
     </style>
   </defs>
-  
-  <!-- Sky gradient -->
-  <defs>
-    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#E0F6FF;stop-opacity:1" />
-    </linearGradient>
-  </defs>
-  <rect width="100%" height="100%" fill="url(#skyGradient)" />
-  
-  <!-- Clouds -->
-  <g class="cloud">
-    <ellipse cx="100" cy="30" rx="20" ry="12" fill="white" opacity="0.8"/>
-    <ellipse cx="110" cy="30" rx="25" ry="15" fill="white" opacity="0.8"/>
-    <ellipse cx="120" cy="30" rx="20" ry="12" fill="white" opacity="0.8"/>
-  </g>
-  
-  <g class="cloud" style="animation-delay: -2s;">
-    <ellipse cx="300" cy="25" rx="15" ry="10" fill="white" opacity="0.7"/>
-    <ellipse cx="310" cy="25" rx="20" ry="12" fill="white" opacity="0.7"/>
-    <ellipse cx="320" cy="25" rx="15" ry="10" fill="white" opacity="0.7"/>
-  </g>
   
   <!-- Road -->
-  <rect x="0" y="150" width="100%" height="50" fill="#404040"/>
-  <line class="road" x1="0" y1="175" x2="100%" y2="175" stroke="white" stroke-width="3"/>
+  <rect x="0" y="80" width="400" height="40" fill="#404040"/>
+  <line class="road-line" x1="0" y1="100" x2="400" y2="100" stroke="white" stroke-width="2" stroke-dasharray="15,10"/>
   
   <!-- Truck -->
-  <g class="truck">
-    <!-- Truck body -->
-    <rect x="50" y="120" width="80" height="30" fill="#2E86AB" rx="5"/>
-    <!-- Truck cab -->
-    <rect x="120" y="110" width="30" height="40" fill="#1F5F79" rx="3"/>
-    <!-- Windows -->
-    <rect x="125" y="115" width="20" height="15" fill="#87CEEB" rx="2"/>
+  <g class="truck-body">
+    <rect x="180" y="50" width="70" height="25" rx="5" fill="#2E86AB"/>
+    <rect x="240" y="40" width="25" height="35" rx="3" fill="#1F5F79"/>
+    <rect x="245" y="45" width="15" height="12" rx="2" fill="#87CEEB"/>
     <!-- Wheels -->
-    <circle class="wheel" cx="70" cy="155" r="8" fill="#333"/>
-    <circle class="wheel" cx="110" cy="155" r="8" fill="#333"/>
-    <circle class="wheel" cx="135" cy="155" r="8" fill="#333"/>
-    <!-- Wheel centers -->
-    <circle cx="70" cy="155" r="3" fill="#666"/>
-    <circle cx="110" cy="155" r="3" fill="#666"/>
-    <circle cx="135" cy="155" r="3" fill="#666"/>
+    <circle class="wheel" cx="195" cy="80" r="8" fill="#333"/>
+    <circle class="wheel" cx="225" cy="80" r="8" fill="#333"/>
+    <circle class="wheel" cx="250" cy="80" r="8" fill="#333"/>
+    <circle cx="195" cy="80" r="3" fill="#666"/>
+    <circle cx="225" cy="80" r="3" fill="#666"/>
+    <circle cx="250" cy="80" r="3" fill="#666"/>
   </g>
   
-  <!-- Title -->
-  <text x="400" y="80" class="title-text" font-size="24" text-anchor="middle" fill="#2E86AB">
-    Fleet Management System
-  </text>
+  <!-- Animated smoke -->
+  <circle class="smoke" cx="185" cy="45" r="3" fill="#888" opacity="0.6"/>
+  <circle class="smoke" cx="190" cy="40" r="2" fill="#999" opacity="0.4" style="animation-delay: 0.5s;"/>
 </svg>
+</p>
 
-![iOS](https://img.shields.io/badge/iOS-15.0+-blue?style=for-the-badge&logo=ios&logoColor=white)
-![Swift](https://img.shields.io/badge/Swift-5.5+-orange?style=for-the-badge&logo=swift&logoColor=white)
-![SwiftUI](https://img.shields.io/badge/SwiftUI-Framework-blue?style=for-the-badge&logo=swift&logoColor=white)
-![Xcode](https://img.shields.io/badge/Xcode-14.0+-blue?style=for-the-badge&logo=xcode&logoColor=white)
-
+<!-- Badges -->
 <p align="center">
-  <strong>🚀 Next-Generation Fleet Management Solution for iOS 🚀</strong>
+  <img src="https://img.shields.io/badge/iOS-15.0+-000000?style=for-the-badge&logo=ios&logoColor=white" alt="iOS"/>
+  <img src="https://img.shields.io/badge/Swift-5.5+-FA7343?style=for-the-badge&logo=swift&logoColor=white" alt="Swift"/>
+  <img src="https://img.shields.io/badge/SwiftUI-Framework-007AFF?style=for-the-badge&logo=swift&logoColor=white" alt="SwiftUI"/>
+  <img src="https://img.shields.io/badge/Xcode-14.0+-147EFB?style=for-the-badge&logo=xcode&logoColor=white" alt="Xcode"/>
 </p>
 
 <p align="center">
-  A powerful, intuitive, and feature-rich iOS application designed to revolutionize fleet management operations.
+  <img src="https://img.shields.io/github/stars/deepakstwt/Fleet-Master1?style=for-the-badge&color=yellow" alt="Stars"/>
+  <img src="https://img.shields.io/github/forks/deepakstwt/Fleet-Master1?style=for-the-badge&color=blue" alt="Forks"/>
+  <img src="https://img.shields.io/github/license/deepakstwt/Fleet-Master1?style=for-the-badge&color=green" alt="License"/>
+  <img src="https://img.shields.io/github/last-commit/deepakstwt/Fleet-Master1?style=for-the-badge&color=red" alt="Last Commit"/>
 </p>
 
+<!-- Description -->
+<h3>🚀 A Revolutionary Fleet Management Solution for iOS</h3>
+<p><em>Transform your fleet operations with cutting-edge technology, real-time tracking, and intelligent analytics. Built natively for iOS using SwiftUI for unparalleled performance and user experience.</em></p>
+
 </div>
 
 ---
 
-## 🌟 Features
+## 🌟 **Features That Set Us Apart**
 
-<div align="center">
-
-<svg width="100%" height="300" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <style>
-      .feature-icon {
-        animation: pulse 2s ease-in-out infinite;
-      }
-      .feature-text {
-        font-family: 'Arial', sans-serif;
-        font-size: 14px;
-        fill: #333;
-      }
-      .feature-card {
-        animation: slideIn 1s ease-out;
-        filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
-      }
-      .gps-signal {
-        animation: ripple 2s ease-out infinite;
-      }
-      
-      @keyframes pulse {
-        0%, 100% { transform: scale(1); opacity: 1; }
-        50% { transform: scale(1.1); opacity: 0.8; }
-      }
-      
-      @keyframes slideIn {
-        from { transform: translateY(50px); opacity: 0; }
-        to { transform: translateY(0); opacity: 1; }
-      }
-      
-      @keyframes ripple {
-        0% { r: 5; opacity: 1; }
-        100% { r: 20; opacity: 0; }
-      }
-    </style>
-  </defs>
-  
-  <!-- Feature Cards -->
-  <g class="feature-card">
-    <rect x="50" y="50" width="150" height="80" fill="#E3F2FD" rx="10"/>
-    <g class="feature-icon">
-      <path d="M110 70 L130 85 L130 95 L110 110 L90 95 L90 85 Z" fill="#2196F3"/>
-    </g>
-    <text x="125" y="125" class="feature-text" text-anchor="middle">Real-time Tracking</text>
-  </g>
-  
-  <g class="feature-card" style="animation-delay: 0.2s;">
-    <rect x="250" y="50" width="150" height="80" fill="#E8F5E8" rx="10"/>
-    <g class="feature-icon">
-      <rect x="310" y="75" width="30" height="20" fill="#4CAF50" rx="3"/>
-      <rect x="315" y="80" width="20" height="10" fill="#2E7D32" rx="1"/>
-    </g>
-    <text x="325" y="125" class="feature-text" text-anchor="middle">Fuel Management</text>
-  </g>
-  
-  <g class="feature-card" style="animation-delay: 0.4s;">
-    <rect x="450" y="50" width="150" height="80" fill="#FFF3E0" rx="10"/>
-    <g class="feature-icon">
-      <circle cx="525" cy="85" r="15" fill="#FF9800"/>
-      <rect x="520" y="80" width="10" height="10" fill="#F57C00"/>
-    </g>
-    <text x="525" y="125" class="feature-text" text-anchor="middle">Maintenance</text>
-  </g>
-  
-  <g class="feature-card" style="animation-delay: 0.6s;">
-    <rect x="150" y="180" width="150" height="80" fill="#F3E5F5" rx="10"/>
-    <g class="feature-icon">
-      <rect x="210" y="205" width="30" height="20" fill="#9C27B0" rx="3"/>
-      <circle cx="225" cy="210" r="3" fill="#FFFFFF"/>
-    </g>
-    <text x="225" y="255" class="feature-text" text-anchor="middle">Driver Analytics</text>
-  </g>
-  
-  <g class="feature-card" style="animation-delay: 0.8s;">
-    <rect x="350" y="180" width="150" height="80" fill="#FFEBEE" rx="10"/>
-    <g class="feature-icon">
-      <polygon points="425,205 435,215 425,225 415,215" fill="#F44336"/>
-      <circle class="gps-signal" cx="425" cy="215" r="5" fill="none" stroke="#F44336" stroke-width="2"/>
-    </g>
-    <text x="425" y="255" class="feature-text" text-anchor="middle">Route Optimization</text>
-  </g>
-</svg>
-
-</div>
-
-### ✨ Key Capabilities
-
-- 🛰️ **Real-time GPS Tracking** - Monitor your fleet's location and status in real-time
-- ⛽ **Fuel Management** - Track fuel consumption and optimize costs
-- 🔧 **Maintenance Scheduling** - Automated maintenance reminders and scheduling
-- 📊 **Driver Analytics** - Comprehensive driver performance metrics
-- 🗺️ **Route Optimization** - AI-powered route planning for maximum efficiency
-- 📱 **Native iOS Experience** - Built with SwiftUI for seamless performance
-- 🔔 **Smart Notifications** - Real-time alerts for critical fleet events
-- 📈 **Business Intelligence** - Advanced reporting and analytics dashboard
+<table align="center">
+  <tr>
+    <td align="center" width="33%">
+      <img width="80" src="https://user-images.githubusercontent.com/74038190/212284087-bbe7e430-757e-4901-90bf-4cd2ce3e1852.gif"/>
+      <h3>🛰️ Real-time Tracking</h3>
+      <p>Monitor your entire fleet with precision GPS tracking and live location updates</p>
+    </td>
+    <td align="center" width="33%">
+      <img width="80" src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif"/>
+      <h3>⛽ Fuel Management</h3>
+      <p>Advanced fuel consumption analytics and cost optimization algorithms</p>
+    </td>
+    <td align="center" width="33%">
+      <img width="80" src="https://user-images.githubusercontent.com/74038190/212284158-e840e285-664b-44d7-b79b-e264b5e54825.gif"/>
+      <h3>🔧 Smart Maintenance</h3>
+      <p>Predictive maintenance scheduling with automated reminders and service tracking</p>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img width="80" src="https://user-images.githubusercontent.com/74038190/212284136-03988914-d899-44b4-b1d9-4eeccf656e44.gif"/>
+      <h3>📊 Driver Analytics</h3>
+      <p>Comprehensive performance metrics and behavior analysis for enhanced safety</p>
+    </td>
+    <td align="center">
+      <img width="80" src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif"/>
+      <h3>🗺️ Route Optimization</h3>
+      <p>AI-powered route planning for maximum efficiency and reduced operational costs</p>
+    </td>
+    <td align="center">
+      <img width="80" src="https://user-images.githubusercontent.com/74038190/212284145-bf2c01a8-c448-4f1a-b911-99112b1423d7.gif"/>
+      <h3>🔔 Smart Alerts</h3>
+      <p>Intelligent notifications for critical fleet events and proactive issue management</p>
+    </td>
+  </tr>
+</table>
 
 ---
 
-## 🛠️ Technology Stack
+## 🛠️ **Technology Stack**
 
 <div align="center">
 
-<svg width="100%" height="150" viewBox="0 0 600 150" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <style>
-      .tech-item {
-        animation: techFloat 3s ease-in-out infinite;
-      }
-      .swift-logo {
-        animation: swiftSpin 4s linear infinite;
-      }
-      .ios-logo {
-        animation: iosPulse 2s ease-in-out infinite;
-      }
-      
-      @keyframes techFloat {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-5px); }
-      }
-      
-      @keyframes swiftSpin {
-        from { transform: rotate(0deg); }
-        to { transform: rotate(360deg); }
-      }
-      
-      @keyframes iosPulse {
-        0%, 100% { transform: scale(1); }
-        50% { transform: scale(1.1); }
-      }
-    </style>
-  </defs>
-  
-  <!-- Swift -->
-  <g class="tech-item swift-logo">
-    <circle cx="100" cy="75" r="30" fill="#FA7343"/>
-    <text x="100" y="80" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Swift</text>
-  </g>
-  
-  <!-- SwiftUI -->
-  <g class="tech-item" style="animation-delay: -1s;">
-    <circle cx="200" cy="75" r="30" fill="#007AFF"/>
-    <text x="200" y="80" text-anchor="middle" fill="white" font-size="10" font-weight="bold">SwiftUI</text>
-  </g>
-  
-  <!-- iOS -->
-  <g class="tech-item ios-logo" style="animation-delay: -2s;">
-    <circle cx="300" cy="75" r="30" fill="#000000"/>
-    <text x="300" y="80" text-anchor="middle" fill="white" font-size="12" font-weight="bold">iOS</text>
-  </g>
-  
-  <!-- Xcode -->
-  <g class="tech-item" style="animation-delay: -0.5s;">
-    <circle cx="400" cy="75" r="30" fill="#1575F9"/>
-    <text x="400" y="80" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Xcode</text>
-  </g>
-  
-  <!-- Core Data -->
-  <g class="tech-item" style="animation-delay: -1.5s;">
-    <circle cx="500" cy="75" r="30" fill="#34C759"/>
-    <text x="500" y="75" text-anchor="middle" fill="white" font-size="9" font-weight="bold">Core</text>
-    <text x="500" y="85" text-anchor="middle" fill="white" font-size="9" font-weight="bold">Data</text>
-  </g>
-</svg>
+<img src="https://skillicons.dev/icons?i=swift,ios,xcode,git,github" alt="Tech Stack" />
+
+<table>
+  <tr>
+    <td align="center"><img width="50" src="https://user-images.githubusercontent.com/74038190/212257454-16e3712e-945a-4ca2-b238-408ad0bf87e6.gif"/><br><strong>Swift 5.5+</strong></td>
+    <td align="center"><img width="50" src="https://user-images.githubusercontent.com/74038190/212257467-871d32b7-e401-42e8-a166-fcfd7baa4c6b.gif"/><br><strong>SwiftUI</strong></td>
+    <td align="center"><img width="50" src="https://user-images.githubusercontent.com/74038190/212257465-7ce8d493-cac5-494e-982a-5a9deb852c4b.gif"/><br><strong>Core Data</strong></td>
+    <td align="center"><img width="50" src="https://user-images.githubusercontent.com/74038190/212257460-738ff738-247f-4445-a718-cdd0ca76e2db.gif"/><br><strong>MapKit</strong></td>
+    <td align="center"><img width="50" src="https://user-images.githubusercontent.com/74038190/212257468-1e9a91f1-b626-4baa-b15d-5c385b7ad558.gif"/><br><strong>Combine</strong></td>
+  </tr>
+</table>
 
 </div>
 
-- **iOS 15.0+** - Targeting modern iOS devices
-- **Swift 5.5+** - Latest Swift language features
-- **SwiftUI** - Declarative UI framework
-- **Core Data** - Local data persistence
-- **MapKit** - Native mapping and location services
-- **CoreLocation** - GPS and location tracking
-- **UserNotifications** - Push notifications and alerts
-- **Combine** - Reactive programming framework
-
 ---
 
-## 🚀 Getting Started
-
-### Prerequisites
+## 🚀 **Quick Start**
 
 <div align="center">
+
+### 📋 Prerequisites
 
 ```bash
-# Check your development environment
+# Verify your development environment
 xcode-select --version
 swift --version
 ```
 
 </div>
 
-### Installation
+### 🛠️ Installation Steps
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/Fleet-Master1.git
-   cd Fleet-Master1
-   ```
+```bash
+# 1. Clone the repository
+git clone https://github.com/deepakstwt/Fleet-Master1.git
+cd Fleet-Master1
 
-2. **Open in Xcode**
-   ```bash
-   open "Fleet Master.xcodeproj"
-   ```
+# 2. Open in Xcode
+open "Fleet Master.xcodeproj"
 
-3. **Build and Run**
-   - Select your target device or simulator
-   - Press `⌘ + R` to build and run
+# 3. Build and run (⌘ + R)
+```
 
-### Configuration
+### ⚙️ Configuration
 
-1. **Location Permissions** - The app requires location access for GPS tracking
-2. **Notification Permissions** - Enable notifications for real-time alerts
-3. **Network Access** - Ensure internet connectivity for real-time features
+<details>
+<summary><strong>📍 Location Services Setup</strong></summary>
+
+1. Enable location permissions in app settings
+2. Configure background location updates
+3. Set up geofencing for fleet boundaries
+</details>
+
+<details>
+<summary><strong>🔔 Push Notifications</strong></summary>
+
+1. Configure APNs certificates
+2. Enable notification permissions
+3. Set up real-time alert preferences
+</details>
+
+<details>
+<summary><strong>🌐 Network Configuration</strong></summary>
+
+1. Ensure stable internet connectivity
+2. Configure API endpoints
+3. Set up offline data synchronization
+</details>
 
 ---
 
-## 📱 Screenshots
+## 📱 **App Preview**
 
 <div align="center">
 
-<svg width="100%" height="200" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+<img src="https://user-images.githubusercontent.com/74038190/212284136-03988914-d899-44b4-b1d9-4eeccf656e44.gif" width="100"/>
+
+<h3>🎬 Coming Soon - Screenshots & Demo</h3>
+
+<p><em>Screenshots and video demonstrations will be updated as development progresses. Stay tuned for amazing visuals!</em></p>
+
+<!-- Phone mockup placeholder -->
+<svg width="300" height="200" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <style>
-      .phone {
-        animation: phoneFloat 4s ease-in-out infinite;
-      }
-      .screen {
-        animation: screenGlow 3s ease-in-out infinite;
-      }
-      .app-icon {
-        animation: iconBounce 2s ease-in-out infinite;
-      }
+      .phone-mockup { animation: phone-float 3s ease-in-out infinite; }
+      .screen-glow { animation: screen-pulse 2s ease-in-out infinite; }
       
-      @keyframes phoneFloat {
-        0%, 100% { transform: translateY(0px) rotate(0deg); }
-        50% { transform: translateY(-10px) rotate(2deg); }
+      @keyframes phone-float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
       }
-      
-      @keyframes screenGlow {
-        0%, 100% { opacity: 0.9; }
+      @keyframes screen-pulse {
+        0%, 100% { opacity: 0.8; }
         50% { opacity: 1; }
       }
-      
-      @keyframes iconBounce {
-        0%, 100% { transform: scale(1); }
-        50% { transform: scale(1.1); }
-      }
     </style>
   </defs>
   
-  <!-- Phone mockup -->
-  <g class="phone">
-    <rect x="350" y="20" width="100" height="160" fill="#000" rx="15"/>
-    <rect x="355" y="25" width="90" height="150" fill="#1E1E1E" rx="10"/>
-    <rect class="screen" x="360" y="35" width="80" height="130" fill="#007AFF" rx="5"/>
-    
-    <!-- App interface mockup -->
-    <rect x="365" y="40" width="70" height="20" fill="#FFFFFF" rx="3"/>
-    <text x="400" y="52" text-anchor="middle" fill="#007AFF" font-size="8" font-weight="bold">Fleet Master</text>
-    
-    <!-- Map representation -->
-    <rect x="365" y="65" width="70" height="50" fill="#E8F5E8" rx="3"/>
-    <circle class="app-icon" cx="400" cy="90" r="8" fill="#FF6B6B"/>
-    <circle cx="385" cy="80" r="3" fill="#4ECDC4"/>
-    <circle cx="415" cy="100" r="3" fill="#45B7D1"/>
-    
-    <!-- Bottom buttons -->
-    <rect x="365" y="125" width="15" height="15" fill="#FF6B6B" rx="2"/>
-    <rect x="385" y="125" width="15" height="15" fill="#4ECDC4" rx="2"/>
-    <rect x="405" y="125" width="15" height="15" fill="#96CEB4" rx="2"/>
-    <rect x="425" y="125" width="15" height="15" fill="#FECA57" rx="2"/>
+  <g class="phone-mockup">
+    <rect x="100" y="30" width="100" height="140" rx="15" fill="#000"/>
+    <rect x="105" y="35" width="90" height="130" rx="10" fill="#1a1a1a"/>
+    <rect class="screen-glow" x="110" y="45" width="80" height="110" rx="5" fill="#007AFF"/>
+    <text x="150" y="105" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Fleet Master</text>
   </g>
-  
-  <text x="400" y="195" text-anchor="middle" fill="#666" font-size="12">Coming Soon - Screenshots will be updated as development progresses</text>
 </svg>
 
 </div>
 
 ---
 
-## 🗂️ Project Structure
+## 🏗️ **Project Architecture**
 
 ```
-Fleet Master/
-├── 📱 Fleet_MasterApp.swift      # Main app entry point
-├── 🖼️  ContentView.swift         # Primary view controller
-├── 🎨 Assets.xcassets/           # App icons and images
-├── 🔍 Preview Content/           # SwiftUI preview assets
-├── 🧪 Fleet MasterTests/         # Unit tests
-├── 🎯 Fleet MasterUITests/       # UI tests
-└── 📊 Fleet Master.xcodeproj/    # Xcode project file
+📦 Fleet Master
+├── 📱 Fleet_MasterApp.swift         # App entry point & configuration
+├── 🎨 Views/
+│   ├── ContentView.swift            # Main dashboard
+│   ├── MapView.swift               # Fleet tracking map
+│   ├── VehicleListView.swift       # Vehicle management
+│   └── AnalyticsView.swift         # Performance metrics
+├── 🧠 Models/
+│   ├── Vehicle.swift               # Vehicle data model
+│   ├── Driver.swift                # Driver information
+│   └── Route.swift                 # Route optimization
+├── 🔧 Services/
+│   ├── LocationService.swift       # GPS tracking
+│   ├── NetworkService.swift        # API communication
+│   └── NotificationService.swift   # Push notifications
+├── 🎨 Resources/
+│   └── Assets.xcassets/            # App icons & images
+└── 🧪 Tests/                       # Unit & UI tests
 ```
 
 ---
 
-## 🤝 Contributing
+## 🤝 **Contributing**
 
 <div align="center">
 
-<svg width="100%" height="100" viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <style>
-      .contributor {
-        animation: contributorWave 3s ease-in-out infinite;
-      }
-      @keyframes contributorWave {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-5px); }
-      }
-    </style>
-  </defs>
-  
-  <circle class="contributor" cx="100" cy="50" r="20" fill="#FF6B6B"/>
-  <circle class="contributor" cx="150" cy="50" r="20" fill="#4ECDC4" style="animation-delay: -0.5s;"/>
-  <circle class="contributor" cx="200" cy="50" r="20" fill="#45B7D1" style="animation-delay: -1s;"/>
-  <circle class="contributor" cx="250" cy="50" r="20" fill="#96CEB4" style="animation-delay: -1.5s;"/>
-  <circle class="contributor" cx="300" cy="50" r="20" fill="#FECA57" style="animation-delay: -2s;"/>
-  
-  <text x="200" y="85" text-anchor="middle" fill="#333" font-size="12" font-weight="bold">Join Our Amazing Community!</text>
-</svg>
+<img src="https://user-images.githubusercontent.com/74038190/212284087-bbe7e430-757e-4901-90bf-4cd2ce3e1852.gif" width="50"/>
+
+<h3>Join Our Amazing Community!</h3>
+
+<p>We welcome contributions from developers worldwide. Here's how you can help:</p>
 
 </div>
 
-We welcome contributions from the community! Here's how you can help:
+### 🔄 Contribution Workflow
 
-1. **🍴 Fork the repository**
-2. **🌿 Create a feature branch** (`git checkout -b feature/AmazingFeature`)
-3. **💾 Commit your changes** (`git commit -m 'Add some AmazingFeature'`)
-4. **📤 Push to the branch** (`git push origin feature/AmazingFeature`)
-5. **🔄 Open a Pull Request**
+1. **🍴 Fork** the repository
+2. **🌿 Create** a feature branch (`git checkout -b feature/AmazingFeature`)
+3. **💾 Commit** your changes (`git commit -m 'Add some AmazingFeature'`)
+4. **📤 Push** to the branch (`git push origin feature/AmazingFeature`)
+5. **🔄 Open** a Pull Request
 
-### Development Guidelines
+### 📝 Development Guidelines
 
-- Follow Swift naming conventions
-- Write unit tests for new features
-- Update documentation as needed
-- Ensure iOS compatibility (15.0+)
+- ✅ Follow Swift naming conventions
+- ✅ Write comprehensive unit tests
+- ✅ Update documentation as needed
+- ✅ Ensure iOS 15.0+ compatibility
+- ✅ Use SwiftUI best practices
 
 ---
 
-## 📄 License
+## 📊 **Project Stats**
 
 <div align="center">
 
-<svg width="100%" height="80" viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <style>
-      .license-text {
-        animation: licenseGlow 4s ease-in-out infinite;
-      }
-      @keyframes licenseGlow {
-        0%, 100% { fill: #666; }
-        50% { fill: #333; }
-      }
-    </style>
-  </defs>
-  
-  <rect x="50" y="20" width="200" height="40" fill="none" stroke="#DDD" stroke-width="2" rx="5"/>
-  <text x="150" y="45" class="license-text" text-anchor="middle" font-size="14" font-weight="bold">MIT License</text>
-</svg>
+<img src="https://github-readme-stats.vercel.app/api?username=deepakstwt&repo=Fleet-Master1&theme=radical&show_icons=true" alt="GitHub Stats"/>
+
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=deepakstwt&theme=radical" alt="GitHub Streak"/>
 
 </div>
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+---
+
+## 📄 **License**
+
+<div align="center">
+
+<img src="https://user-images.githubusercontent.com/74038190/212284145-bf2c01a8-c448-4f1a-b911-99112b1423d7.gif" width="50"/>
+
+<h3>📋 MIT License</h3>
+
+<p>This project is licensed under the MIT License - see the <a href="LICENSE">LICENSE</a> file for details.</p>
+
+</div>
 
 ---
 
-## 📞 Contact & Support
+## 🌐 **Connect With Us**
 
 <div align="center">
+
+<h3>📞 Get in Touch</h3>
 
 <p>
-  <a href="mailto:support@fleetmaster.com">📧 support@fleetmaster.com</a> |
-  <a href="https://twitter.com/fleetmaster">🐦 @FleetMaster</a> |
-  <a href="https://linkedin.com/company/fleetmaster">💼 LinkedIn</a>
+<a href="mailto:deepak.prajapati@fleetmaster.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
+<a href="https://linkedin.com/in/deepakprajapati"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+<a href="https://twitter.com/deepakprajapati"><img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter"/></a>
+<a href="https://github.com/deepakstwt"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/></a>
 </p>
 
-<p>
-  <strong>Made with ❤️ by Kushagra Kulshrestha</strong>
-</p>
+<h3>💝 Made with ❤️ by Deepak Prajapati</h3>
 
-<svg width="100%" height="50" viewBox="0 0 400 50" xmlns="http://www.w3.org/2000/svg">
-  <text x="200" y="30" text-anchor="middle" fill="#666" font-size="12">
-    ⭐ If you found this project helpful, please give it a star! ⭐
-  </text>
-</svg>
+<img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=20&duration=3000&pause=1000&color=FF6B6B&center=true&vCenter=true&width=600&lines=Thank+you+for+visiting+Fleet+Master!;⭐+Star+this+repo+if+you+found+it+helpful!;Happy+Fleet+Management!+🚛✨" alt="Footer"/>
 
 </div>
 
----
-
-<div align="center">
-
-![Footer](https://readme-typing-svg.herokuapp.com?font=Orbitron&size=20&duration=3000&pause=1000&color=2E86AB&center=true&vCenter=true&width=600&lines=Thank+you+for+using+Fleet+Master!;Happy+Fleet+Management!+🚛✨)
+<!-- Footer wave -->
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer"/>
 
 </div>
